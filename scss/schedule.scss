@@ -1,0 +1,25 @@
+#schedule {
+    background: rgba(58,58,255,0.1);
+    .schedule-btn-link {
+      text-decoration: none;
+    }
+    .schedule-btn {
+      color: white;
+      padding: 1rem;
+      background: $red;
+      font-size: 1rem;
+      border: 2px solid $red;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 50%;
+      display: block;
+      margin: 2rem auto 0 auto;
+      transition: background .25s, color .25s, border .25s;
+      &:hover, &:active {
+        background: rgba(58,58,255,0.1);
+        color: $blue;
+        border: 2px solid $blue;
+        outline: 0;
+      }
+    }
+  }

@@ -1,0 +1,303 @@
+/*****************************************************/
+/**
+  *
+  * DESKTOP (COPY)
+  *
+  */
+$break-point: 700px;
+$break-point-plus-one: 701px;
+
+@media only screen and (min-width: $break-point-plus-one) {
+  .mobile-menu,
+  .nav-btn,
+  .nav-menu-close-btn {
+    display: none;
+  }
+  .content-wrapper-header {
+    max-width: 832px;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 2;
+    margin: .5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-logo-link {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+    }
+  }
+  .desktop-menu {
+    margin-right: 1rem;
+    .nav-menu-list {
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      .nav-menu-item {
+        display: inline-block;
+        padding-right: 1rem;
+        &:last-of-type {
+          padding-right: 0rem;
+        }
+        .nav-menu-link {
+          // border: 2px solid green;
+          
+          text: {
+            transform: uppercase;
+            decoration: none;
+          }
+          &:hover, &:active {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*****************************************************/
+/**
+  *
+  * MOBILE (COPY)
+  *
+  */
+@media only screen and (max-width: $break-point) {
+  $small-screen-menu-open-width: 320px;
+  * {
+    box-sizing: border-box;
+  }
+  .desktop-menu {
+    display: none;
+  }
+  .nav-mask,
+  .nav-menu {
+    position: fixed; 
+  }
+
+  // Disable scrolling of main content when the menu is active (COPY)
+  // .nav-mask,
+  // body.has-active-menu {
+  //   overflow: hidden; 
+  // } // End disable scrolling of main content when the menu is active 
+
+  // General styling of the navigation menu (COPY)
+  .nav-menu {
+    z-index: 200;
+
+  }
+  .content-wrapper-header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  } // End general styling of the navigation menu 
+
+  // Button styling (COPY)
+  .nav-btn,
+  .nav-menu-close-btn {
+    cursor: pointer;
+    font-size: 1.75rem;
+    line-height: 0;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    svg {
+      cursor: pointer;
+      vertical-align: middle;
+      line {
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+    }
+  }
+
+  .nav-btn {
+    border: 2px solid $red;
+    border-radius: 5px;
+    svg line {
+      stroke: $red;
+    }
+  }
+
+  .nav-menu-close-btn {
+    svg line {
+      stroke: white;
+    }
+    
+  }
+  // End button styling
+
+  // Start Menu List Styles (COPY)
+  .nav-menu-list {
+
+  }
+
+  .nav-menu-item {
+
+  }
+  // End Menu Item Styles
+
+
+
+
+
+  /*****************************************************/
+  /**
+    *
+    * MASK (COPY)
+    *
+    */
+
+  .nav-mask {
+    z-index: 199;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity .3s,width 0s .3s,height 0s .3s;
+    transition: opacity .3s,width 0s .3s,height 0s .3s; 
+  }
+
+  .nav-mask.is-active {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s; 
+  }
+
+  /**
+    *
+    * END MASK
+    *
+    */
+  /*****************************************************/
+
+
+
+
+
+  /*****************************************************/
+  /**
+    *
+    * GENERAL ANIMATIONS (COPY)
+    *
+    */
+
+  // General animation of the content wrapper
+  .content-wrapper {
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+  } // End general animation of the content wrapper
+
+
+  // General animation of the navigation slide 
+  .nav-menu {
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s; 
+  }
+  // End general animation of the navigation slide 
+
+  /**
+    *
+    * END GENERAL ANIMATIONS
+    *
+    */
+  /*****************************************************/
+
+
+
+
+
+
+  /*****************************************************/
+  /**
+    *
+    * PUSH RIGHT
+    */
+  // General styling of the navigation menu when it slides in from left or right
+  .nav-menu-push-right {
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    height: 100%;
+    width: 100%;
+    background: $red;
+    .nav-menu-item {
+      margin: 1rem;
+    }
+    // General styling of the navigation links on left and right menu
+    .mobile-menu-link {
+      // border: 2px solid aqua;
+      color: white;
+      font-size: 1.6rem;
+      text-decoration: none;
+      &:hover, &:active {
+        color: $blue;
+      }
+    }
+    // General styling of the close button on left and right menu
+    .nav-menu-close-btn {
+      // border: 2px solid green;
+      display: block;
+      margin: 1rem;
+      text-align: right;
+    } 
+  }
+
+  @media only screen and (min-width: $small-screen-menu-open-width) {
+    .nav-menu-push-right {
+      width: 300px; 
+    }
+  } // End general styling of the navigation menu when it slides in from left or right
+
+  .nav-menu-push-right {
+    top: 0;
+    right: 0;
+    // May not need
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%); 
+    // End may not need
+  }
+
+  @media only screen and (min-width: $small-screen-menu-open-width) {
+    .nav-menu-push-right {
+      -webkit-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+      transform: translateX(300px); 
+    }
+  }
+  
+  .nav-menu-push-right.is-active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); 
+  }
+
+  .content-wrapper.has-push-right {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); 
+  }
+
+  @media only screen and (min-width: $small-screen-menu-open-width) {
+    .content-wrapper.has-push-right {
+      -webkit-transform: translateX(-300px);
+      -ms-transform: translateX(-300px);
+      transform: translateX(-300px); 
+    }
+  }
+}

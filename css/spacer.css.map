@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,GAAG",
+"sources": ["../scss/spacer.scss"],
+"names": [],
+"file": "spacer.css"
+}

@@ -1,0 +1,48 @@
+@import 'main', 'nav', 'home', 'spacer', 'more';
+
+#home {
+  height: auto;
+}
+
+.mobile-calendar {
+  border: 3px solid $red;
+  min-height: 400px;
+  width: 100%;
+}
+
+.desktop-calendar {
+  border: 3px solid $red;
+  height: 705px;
+  width: 100%;
+  min-width: 650px;
+  margin: auto;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+p {
+  text-align: left;
+}
+
+.note {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+// Desktop View
+@media screen and (min-width: 700px) {
+  .mobile-calendar {
+    display: none;
+  }
+}
+
+// Tablet/Mobile View
+@media screen and (max-width: 699px) {
+  .desktop-calendar {
+    display: none;
+  }
+}

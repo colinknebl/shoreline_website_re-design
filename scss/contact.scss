@@ -1,0 +1,57 @@
+#contact {
+  
+  form {
+    width: 100%;
+    margin: auto;
+    .input-grp {
+      margin: 1rem auto;
+      display: flex;
+    }
+    label {
+      display: inline-block;
+      width: 120px;
+      text-align: right;
+      margin-right: .5rem;
+    }
+    input, textarea {
+      flex-grow: 1;
+      padding: .5rem;
+      color: $blue;
+      border: 2px solid $red;
+      border-radius: 6px;
+      &::placeholder {
+        color: rgba(60,60,255,0.6);
+      }
+      &:focus {
+        border: 2px solid $blue;
+        outline: 0;
+      }
+    }
+    textarea {
+      min-height: 150px;
+    }
+    .form-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .spacer {
+      width: 120px;
+      margin-right: .5rem;
+    }
+    button {
+      @extend .btn;
+      flex-grow: 1;
+      transition: background .25s, color .25s, border .25s;
+      &:hover, &:active {
+        background: white;
+        color: $blue;
+        border: 2px solid $blue;
+        outline: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 700px) {
+ 
+       
+  }
+}

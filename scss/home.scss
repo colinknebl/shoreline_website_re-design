@@ -1,0 +1,42 @@
+#home {
+  height: 100vh;
+  text-align: center;
+  background: {
+    image: url('../assets/images/header-court.jpg');
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+  }
+  .header-logo {
+    position: relative;
+    z-index: 1;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+  }
+  .header-welcome-msg {
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+  }
+  .header-contact-cta {
+    position: relative;
+    z-index: 1;
+    p, a {
+      font-size: 1.2rem;
+    }
+  }
+}
