@@ -1,0 +1,282 @@
+/*****************************************************/
+/**
+  *
+  * DESKTOP (COPY)
+  *
+  */
+  
+@media only screen and (min-width: 701px) {
+  .mobile-menu,
+  .nav-btn,
+  .nav-menu-close-btn {
+    display: none;
+  }
+  .content-wrapper-header {
+    max-width: 832px;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 2;
+    margin: .5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content-wrapper-header .header-logo-link {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  .desktop-menu {
+    margin-right: 1rem;
+  }
+  .desktop-menu .nav-menu-list {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+  .desktop-menu .nav-menu-list .nav-menu-item {
+    display: inline-block;
+    padding-right: 1rem;
+  }
+  .desktop-menu .nav-menu-list .nav-menu-item:last-of-type {
+    padding-right: 0rem;
+  }
+  .desktop-menu .nav-menu-list .nav-menu-item .nav-menu-link {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .desktop-menu .nav-menu-list .nav-menu-item .nav-menu-link:hover,
+  .desktop-menu .nav-menu-list .nav-menu-item .nav-menu-link:active {
+    color: rgb(60,60,255);
+  }
+}
+
+
+/*****************************************************/
+/**
+  *
+  * MOBILE (COPY)
+  *
+  */
+@media only screen and (max-width: 700px) {
+  * {
+    box-sizing: border-box;
+  }
+  .desktop-menu {
+    display: none;
+  }
+  .nav-mask,
+  .nav-menu {
+    position: fixed; 
+  }
+
+  /* General styling of the navigation menu (COPY) */
+  .nav-menu {
+    z-index: 200;
+
+  }
+  .content-wrapper-header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content-wrapper-header a {
+    display: flex;
+    align-items: center;
+  }
+  /* End general styling of the navigation menu  */
+
+  /* Button styling (COPY) */
+  .nav-btn,
+  .nav-menu-close-btn {
+    cursor: pointer;
+    font-size: 1.75rem;
+    line-height: 0;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+  }
+  .nav-btn svg,
+  .nav-menu-close-btn svg {
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  .nav-btn svg line,
+  .nav-menu-close-btn svg line {
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  .nav-btn {
+    border: 2px solid rgb(217,60,60);
+    border-radius: 5px;
+  }
+  .nav-btn svg line {
+    stroke: rgb(217,60,60);
+  }
+
+  .nav-menu-close-btn svg line {
+    stroke: white;
+  }
+  /* End button styling */
+
+
+
+
+
+  /*****************************************************/
+  /**
+    *
+    * MASK (COPY)
+    *
+    */
+
+  .nav-mask {
+    z-index: 199;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity .3s,width 0s .3s,height 0s .3s;
+    transition: opacity .3s,width 0s .3s,height 0s .3s; 
+  }
+
+  .nav-mask.is-active {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s; 
+  }
+
+  /**
+    *
+    * END MASK
+    *
+    */
+  /*****************************************************/
+
+
+
+
+
+/*****************************************************/
+/**
+  *
+  * GENERAL ANIMATIONS (COPY)
+  *
+  */
+
+/* General animation of the content wrapper */
+.content-wrapper {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+} 
+/* End general animation of the content wrapper */
+
+
+/* General animation of the navigation slide  */
+.nav-menu {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s; 
+}
+/* End general animation of the navigation slide  */
+
+/**
+  *
+  * END GENERAL ANIMATIONS
+  *
+  */
+/*****************************************************/
+
+
+
+
+
+
+/*****************************************************/
+/**
+  *
+  * PUSH RIGHT
+  */
+/* General styling of the navigation menu when it slides in from left or right */
+.nav-menu-push-right{
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  background: rgb(217,60,60);
+}
+.nav-menu-push-right::-webkit-scrollbar {
+  display: none;
+}
+.nav-menu-push-right .nav-menu-item {
+  margin: 1rem;
+}
+.nav-menu-push-right .mobile-menu-link {
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.nav-menu-push-right .mobile-menu-link:hover,
+.nav-menu-push-right .mobile-menu-link:active {
+  color: rgb(60,60,255);
+}
+/* General styling of the navigation links on left and right menu */
+  
+/* General styling of the close button on left and right menu */
+.nav-menu-close-btn {
+  display: block;
+  margin: 1rem;
+  text-align: right;
+} 
+}
+
+@media only screen and (min-width: 320px) {
+  .nav-menu-push-right {
+    width: 300px; 
+  }
+}
+/* End general styling of the navigation menu when it slides in from left or right */
+
+.nav-menu-push-right {
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%); 
+}
+
+@media only screen and (min-width: 320px) {
+  .nav-menu-push-right {
+    -webkit-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px); 
+  }
+}
+
+.nav-menu-push-right.is-active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); 
+}
+
+.content-wrapper.has-push-right {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%); 
+}
+
+@media only screen and (min-width: 320px) {
+  .content-wrapper.has-push-right {
+    -webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px); 
+  }
+}
+  

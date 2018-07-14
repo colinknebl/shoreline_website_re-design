@@ -1,0 +1,34 @@
+#home {
+  height: 100vh;
+  text-align: center;
+  background-image: url("../../_assets/header-court.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  #home::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+  #home .header-logo {
+    position: relative;
+    z-index: 1; }
+  #home h2 {
+    font-size: 1.4rem;
+    margin-top: .5rem; }
+  #home .header-welcome-msg {
+    position: relative;
+    z-index: 1;
+    line-height: 1.2; }
+  #home .header-contact-cta {
+    position: relative;
+    z-index: 1; }
+    #home .header-contact-cta p, #home .header-contact-cta a {
+      font-size: 1.2rem; }

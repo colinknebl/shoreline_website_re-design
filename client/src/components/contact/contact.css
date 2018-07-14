@@ -1,0 +1,63 @@
+#contact form {
+  width: 100%;
+  margin: auto;
+}
+#contact form .input-grp {
+  margin: 1rem auto;
+      display: flex;
+}
+#contact form label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-right: .5rem;
+}
+#contact form input {
+  flex-grow: 1;
+  padding: .5rem;
+  color: rgb(60,60,255)e;
+  border: 2px solid rgb(217,60,60);
+  border-radius: 6px;
+}
+#contact form textarea {
+  flex-grow: 1;
+  padding: .5rem;
+  color: rgb(60,60,255);
+  border: 2px solid rgb(217,60,60);
+  border-radius: 6px;
+}
+#contact form input::placeholder, #contact form textarea::placeholder {
+  color: rgba(60,60,255,0.6);
+}
+#contact form input::focus, #contact form textarea::focus {
+  border: 2px solid rgb(60,60,255);
+  outline: 0;
+}
+#contact form textarea {
+  min-height: 150px;
+}
+#contact form .form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+#contact form .spacer {
+  width: 120px;
+  margin-right: .5rem;
+}
+#contact form button {
+  padding: 1rem;
+  background: rgb(217,60,60);
+  color: white;
+  font-size: 1rem;
+  border: 2px solid rgb(217,60,60);
+  border-radius: 6px;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: background .25s, color .25s, border .25s;
+}
+#contact form button:hover, #contact form button:active {
+  background: white;
+  color: rgb(60,60,255);
+  border: 2px solid rgb(60,60,255);
+  outline: 0;
+}

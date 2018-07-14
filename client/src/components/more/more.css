@@ -1,0 +1,44 @@
+#more {
+  background-image: url('../../_assets/footer-ball.jpg'); 
+  background-position: center;
+  background-size: cover;
+}
+#more::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.45);
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 0;
+}
+#more .footer-list-grp {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+#more .footer-list-grp:last-of-type {
+  margin-bottom: 0;
+}
+#more .footer-list {
+  list-style-type: none;
+  text-align: center;
+}
+#more .footer-list a:hover {
+  color: rgb(60,60,255);
+}
+
+@media screen and (min-width: 1000px) {
+  #more .section-content-footer {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #more .section-content-footer .footer-list-grp .section-header {
+    text-align: left;
+  }
+  #more .section-content-footer .footer-list-grp .footer-list {
+    text-align: left;
+  }
+}
