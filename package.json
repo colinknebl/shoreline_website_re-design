@@ -1,0 +1,25 @@
+{
+  "name": "shaa-website",
+  "version": "1.0.0",
+  "description": "Shoreline Breakers Re-Designed Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colinknebl/shoreline_website_re-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colinknebl/shoreline_website_re-design/issues"
+  },
+  "homepage": "https://github.com/colinknebl/shoreline_website_re-design#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}
